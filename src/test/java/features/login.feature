@@ -1,12 +1,14 @@
 Feature: login.feature
 
+  @smoke @regression
+
   Scenario: user able to login with valid email and password
     Given user on TalentTEK homepage
     And user enter valid email
     And user enter valid password
     When user click on login button
     Then user should able to successfully login
-
+  @smoke
   Scenario: user should not able to login with valid email and invalid password
     Given user on TalentTEK homepage
     And user enter valid email
